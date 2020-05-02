@@ -1,0 +1,14 @@
+﻿
+@{
+	Layout = "~/Views/Shared/_LayoutFirstPage1.cshtml";
+}
+
+
+<h1> Work With ID</h1>
+@for (int i = 0; i < ViewBag.id; i++)
+{
+	<li>
+		item @(i)
+	</li>
+}
+

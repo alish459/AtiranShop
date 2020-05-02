@@ -1,0 +1,33 @@
+﻿@model IEnumerable<PersianShop.Models.Services.FormAndMenuServices>
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta name="viewport" content="width=device-width" />
+	<title>@ViewBag.Title</title>
+	<link href="~/Content/RTL Css/css/bootstrap-rtl.css" rel="stylesheet">
+	<script src="~/Content/RTL Css/Scripts/jquery-1.10.2.min.js"></script>
+	<script src="~/Content/RTL Css/Scripts/bootstrap-rtl.js"></script>
+</head>
+<body>
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container-fluid">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				@foreach (var item in Model)
+				{
+					<a class="navbar-brand" href="#">@item.SubSystemName</a>
+				}
+				<a class="navbar-brand" href="/Home/F12">ليست مشتريان</a>
+			</div>
+		</div><!-- /.container-fluid -->
+	</nav>
+	@RenderBody()
+</body>
+</html>

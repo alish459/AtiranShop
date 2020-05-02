@@ -1,0 +1,11 @@
+﻿@model IEnumerable<PersianShop.Models.Services.CustomerService>
+@{
+	Layout = "~/Views/Shared/_LayoutFirstPage1.cshtml";
+}
+
+@foreach (var item in Model)
+{
+	@item.Moname
+	<br />
+}
+

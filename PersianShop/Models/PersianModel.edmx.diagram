@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="e15c010cfc9d469c8f94bfdfe1f0fa36" Name="Diagram1" ZoomLevel="78">
+        <EntityTypeShape EntityType="sacModel.cust_act" Width="1.5" PointX="3" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="sacModel.CUSTOMERS" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
+        <AssociationConnector Association="sacModel.FK_cust_act_CUSTOMERS" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="sacModel.sys_users" Width="1.5" PointX="3" PointY="11" />
+        <EntityTypeShape EntityType="sacModel.Field" Width="1.5" PointX="6" PointY="17.875" />
+        <EntityTypeShape EntityType="sacModel.Form" Width="1.5" PointX="6" PointY="4.75" />
+        <EntityTypeShape EntityType="sacModel.Menu" Width="1.5" PointX="6" PointY="29.5" />
+        <EntityTypeShape EntityType="sacModel.SubSystem" Width="1.5" PointX="3" PointY="18" />
+        <EntityTypeShape EntityType="sacModel.SubSystemPermission" Width="1.5" PointX="5.25" PointY="10.875" />
+        <EntityTypeShape EntityType="sacModel.UserFavorites" Width="1.5" PointX="8.25" PointY="16" />
+        <EntityTypeShape EntityType="sacModel.UserFieldPermission" Width="1.5" PointX="8.25" PointY="12.875" />
+        <EntityTypeShape EntityType="sacModel.UserFormPermission" Width="1.5" PointX="8.25" PointY="9.875" />
+        <EntityTypeShape EntityType="sacModel.UserPersonalizationForColor" Width="1.5" PointX="5.25" PointY="25.625" />
+        <EntityTypeShape EntityType="sacModel.UserPersonalizationForFont" Width="1.5" PointX="5.25" PointY="14.25" />
+        <AssociationConnector Association="sacModel.FK_sys_users_CUSTOMERS" />
+        <AssociationConnector Association="sacModel.FK_UserFavorites_sys_users" />
+        <AssociationConnector Association="sacModel.FK_UserFieldPermission_sys_users" />
+        <AssociationConnector Association="sacModel.FK_UserFormPermission_sys_users" />
+        <AssociationConnector Association="sacModel.FK_UserID" />
+        <AssociationConnector Association="sacModel.FK_UserPersonalizationForColor_sys_users" />
+        <AssociationConnector Association="sacModel.FK_UserPersonalizationForFont_sys_users" />
+        <AssociationConnector Association="sacModel.FK_Field_Form" />
+        <AssociationConnector Association="sacModel.FK_UserFieldPermission_Field" />
+        <AssociationConnector Association="sacModel.FK_Menu_Form" />
+        <AssociationConnector Association="sacModel.FK_UserFormPermission_Form" />
+        <AssociationConnector Association="sacModel.FK_UserFavorites_Menu" />
+        <AssociationConnector Association="sacModel.Fk_SubSystemID" />
+        <EntityTypeShape EntityType="sacModel.overal_setting" Width="1.5" PointX="3.375" PointY="0.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
