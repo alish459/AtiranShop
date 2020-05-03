@@ -68,7 +68,8 @@ namespace PersianShop.Controllers
 		}
 		public ActionResult F12()
 		{
-			return View(PersianShop.Models.Operation.FormAndMenuOperation.ReturnSubSystems());
+			var Result = PersianShop.Models.Operation.CustomerOperation.ReturnCustomers();
+			return View(Result);
 		}
 	}
 }

@@ -17,6 +17,7 @@ namespace PersianShop.Models.Services
         public int Act_id { get; set; }
         public string UserName { get; set; }
         public decimal Manafter { get; set; }
+        public decimal RealManafter { get; set; }
         public long Ghno { get; set; }
         public string Done_Date { get; set; }
         public bool ShowInReport { get; set; }
@@ -24,5 +25,7 @@ namespace PersianShop.Models.Services
         public string MoghayeratDiscription { get; set; }
         public int SysID { get; set; }
         public string Moname { get; set; }
+        public string Address { get; set; }
+        public string Tell { get; set; }
     }
 }

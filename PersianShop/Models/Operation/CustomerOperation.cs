@@ -35,5 +35,22 @@ namespace PersianShop.Models.Operation
 						}).OrderByDescending(a => a.Date).Take(10).ToList();
 			}
 		}
+		public static List<Models.Services.CustomerService> ReturnCustomers()
+		{
+			using (var context = new Models.PersianEntities())
+			{
+				return (from read in context.CUSTOMERS
+						select new Models.Services.CustomerService
+						{
+							Moname = read.MONAME,
+							Tell = read.cell,
+							Address = read.addre,
+							Manafter = Math.Abs(read.man),
+							Status = read.man > 0 ? "بدهكار" : read.man < 0 ? "بستانكار" : "--",
+							Shmo = read.SHMO,
+							RealManafter = read.man
+						}).OrderByDescending(a => a.Shmo).Take(20).ToList();
+			}
+		}
 	}
 }

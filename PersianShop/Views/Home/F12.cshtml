@@ -1,8 +1,52 @@
-﻿
+﻿@model IEnumerable<PersianShop.Models.Services.CustomerService>
 @{
-    ViewBag.Title = "F12";
-    Layout = "~/Views/Shared/_LayoutFirstPage1.cshtml";
+	ViewBag.Title = "F12";
+	Layout = null;
 }
+<!DOCTYPE html>
 
-<h2>F12</h2>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width" />
+	<title>@ViewBag.Title</title>
+	<link href="~/Content/RTL Css/css/bootstrap-rtl.css" rel="stylesheet">
+	@*<script src="~/Content/RTL Css/Scripts/jquery-1.10.2.min.js"></script>
+	<script src="~/Content/RTL Css/Scripts/bootstrap-rtl.js"></script>*@
+</head>
+<body>
+	<table class="table table-hover">
+		<thead>
+			<tr>
+				<th>#</th>
+				<th>نام مشتري</th>
+				<th>شماره تلفن</th>
+				<th>آدرس</th>
+				<th>مانده</th>
+				<th>وضعيت</th>
+				<th>جزييات</th>
+			</tr>
+		</thead>
+		<tbody>
+			@foreach (var item in Model)
+			{
+				<tr class=@(item.RealManafter>0? "danger" : item.RealManafter<0?"success" : "info")>
+					<td>@item.Shmo</td>
+					<td>@item.Moname</td>
+					<td>@item.Tell</td>
+					<td>@item.Address</td>
+					<td>@item.Manafter.ToString("#,0")</td>
+					<td>@item.Status</td>
+					<td>
+						<a class="btn btn-primary btn-block " href="/Home/CustActDetails/@item.Shmo">
+							جزييات
+						</a>
+					</td>
+				</tr>
+			}
+
+		</tbody>
+	</table>
+</body>
+</html>
+
 
